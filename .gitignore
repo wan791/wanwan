@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-node_modules
-dist/
-.pnpm-debug.log
-*.log
-.DS_Store
-=======
 node_modules/
 .DS_Store
 dist-ssr
@@ -16,20 +9,18 @@ __pycache__/
 .vscode/
 *.log
 *.db
-.DS_Store
 *.sqlite3
 .env.local
 .env.*.local
-node_modules/
 dist/
 build/
 *.pyc
 *.pyo
 *.pyd
 .Python
+.pnpm-debug.log
 
 # Deployment configuration files (different for each deployment)
 # wrangler.toml - 现在需要推送到仓库供 Cloudflare 构建使用
 render.yaml
 #.env.production
->>>>>>> 8d3d183 (Add all remaining source code files and configurations)
