@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cloudflare Workers 配置
 # Worker 名称：greg-mcdermott
 name = "greg-mcdermott"
@@ -30,3 +31,37 @@ zone_name = "greg-mcdermott.com"
 # 匹配 www.greg-mcdermott.com下所有路径
 pattern = "www.greg-mcdermott.com/*"
 zone_name = "greg-mcdermott.com"
+=======
+# Cloudflare Workers 配置
+# Worker 名称：george-gilder
+name = "george-gilder"
+# 兼容性日期
+compatibility_date = "2025-11-25"
+# Worker 入口文件
+main = "./src/index.ts"
+
+# 环境变量（前端可通过 import.meta.env 访问）
+[vars]
+NODE_ENV = "production"
+VITE_API_URL = "https://apistock-1hgl.onrender.com"
+VITE_Web_Trader_UUID = "61cc0bb0-1f1a-4dac-be47-5c2bcc1c3019"
+
+# 静态资源配置
+[assets]
+directory = "./dist/"
+not_found_handling = "single-page-application"
+binding = "ASSETS"
+# 只有 API 请求先运行 Worker，其他请求直接由 Cloudflare 处理静态资源
+run_worker_first = [ "/api/*" ]
+
+# 路由配置
+[[routes]]
+# 匹配根域名 george-gilder.vip 下所有路径
+pattern = "george-gilder.vip/*"
+zone_name = "george-gilder.vip"
+
+[[routes]]
+# 匹配 www.george-gilder.vip 下所有路径
+pattern = "www.george-gilder.vip/*"
+zone_name = "george-gilder.vip"
+>>>>>>> 8d3d183 (Add all remaining source code files and configurations)
