@@ -1,6 +1,6 @@
 # Cloudflare Workers 配置
 # Worker 名称：greg-mcdermott
-name = "greg-mcdermott"
+name = "wanwan"
 # 兼容性日期
 compatibility_date = "2025-11-25"
 # Worker 入口文件
